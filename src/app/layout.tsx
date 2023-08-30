@@ -1,3 +1,4 @@
+import Menu from '@/components/base/Menu'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -16,7 +17,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+        <body
+        className={`${inter.className} text-gray-100 bg-[#1F2B3D]`}
+      >
+        <main className="grid grid-cols-[20vw,80vw] h-screen ">
+          <Menu />
+          <div className="flex h-full max-h-screen flex-col bg-cover">
+            {children}
+          </div>
+        </main>
+      </body>
     </html>
   )
 }
