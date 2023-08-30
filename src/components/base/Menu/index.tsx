@@ -29,10 +29,10 @@ const buttons: ButtonProps[] = [
 
 export default function Menu() {
   return (
-    <div className=" flex flex-col max-w-[20vw] w-full px-4 py-5 justify-between items-start h-screen bg-base-950 border-r-[1px] border-gray-300/40">
-      <div className="flex flex-col w-full items-center gap-6">
+    <div className=" flex flex-col  w-full  py-5 justify-between items-start h-screen bg-base-950 border-r-[1px] border-gray-300/40">
+      <div className="flex flex-col w-full items-center  gap-6">
         <h1>Yu-Gi-Oh!</h1>
-        <div className="flex flex-col items-start justify-between w-full gap-6">
+        <div className="flex flex-col items-start  h-full w-full">
           {buttons.map((button) => (
             <MenuButton key={button.id} buttonText={button.buttonText} icon={button.icon} path={button.path} />
           ))}
