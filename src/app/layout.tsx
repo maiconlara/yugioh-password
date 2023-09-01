@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
         <body
-        className={`${inter.className} text-gray-100 bg-[#09090B]`}
+        className={`${inter.className} text-gray-100 bg-[#111111]`}
       >
         <main className="grid md:grid-cols-[300px,calc(80vw-300px)] h-screen ">
           <Menu />

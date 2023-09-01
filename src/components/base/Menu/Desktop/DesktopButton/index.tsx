@@ -10,7 +10,7 @@ const DesktopButton = ({ buttonText, Icon, path }: ButtonProps) => {
   return (
     <div className="w-full h-12 ">
       <Link href={path}>
-        <div className="bg-[#1F2B3D] w-full h-full px-5 flex flex-row items-center rounded-sm hover:bg-base-400 transition-colors">
+        <div className="bg-[#000] w-full h-full px-5 flex flex-row items-center rounded-sm hover:border-gray-300/40 hover:border-[1px] transition-transform hover:translate-x-2">
           <Icon className="mr-2 h-4 w-4" />
           {buttonText}
         </div>{" "}

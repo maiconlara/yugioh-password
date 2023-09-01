@@ -5,7 +5,7 @@ import { buttons } from "../data";
 
 const Desktop = () => {
   return (
-    <div className="hidden md:flex flex-col  w-full  py-5 justify-between items-start h-screen bg-base-950 border-r-[1px] border-gray-300/40">
+    <div className="hidden md:flex flex-col  w-full  py-5 justify-between items-start h-screen bg-black border-r-[1px] border-gray-300/40">
       <div className="flex flex-col w-full items-center  gap-6">
         <h1>Yu-Gi-Oh!</h1>
         <div className="w-full bg-gray-300/40 h-px"></div>
