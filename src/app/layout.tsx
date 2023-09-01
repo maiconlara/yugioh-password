@@ -18,11 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
         <body
-        className={`${inter.className} text-gray-100 bg-[#1F2B3D]`}
+        className={`${inter.className} text-gray-100 bg-[#09090B]`}
       >
         <main className="grid md:grid-cols-[300px,calc(80vw-300px)] h-screen ">
           <Menu />
-          <div className="flex h-full max-h-screen flex-col bg-cover">
+          <div className="flex h-full max-h-screen w-full flex-col bg-cover">
             {children}
           </div>
         </main>
