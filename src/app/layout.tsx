@@ -1,9 +1,12 @@
 import Menu from '@/components/base/Menu'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Titillium_Web } from 'next/font/google'
+import favicon from '../assets/favicon.ico'
 
 const inter = Inter({ subsets: ['latin'] })
+const titiliumRegular = Titillium_Web({ subsets: ['latin'], weight: "400", variable: "--font-regular" })
+const titiliumBold = Titillium_Web({ subsets: ['latin'], weight: "700", variable: "--font-bold" })
 
 export const metadata: Metadata = {
   title: 'Yu-Gi-Oh! App',
@@ -17,10 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+        <link rel="icon" href="../assets/favicon.ico" />
         <body
-        className={`${inter.className} text-gray-100 bg-[#111111]`}
+        className={`${inter.className} ${titiliumRegular.variable} ${titiliumBold.variable} font-regular text-white text-lg leading-relaxed bg-[#111111]`}
       >
-        <main className="grid md:grid-cols-[300px,calc(80vw-300px)] h-screen ">
+        <main className="grid md:grid-cols-[300px,calc(80vw-300px)] h-screen  ">
           <Menu />
           <div className="flex h-full max-h-screen w-full flex-col bg-cover">
             {children}

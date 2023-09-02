@@ -19,7 +19,7 @@ const DesktopButton = ({
     <div className="w-full h-12 ">
       {selectedPath === buttonText ? (
         <Link href={path} onClick={() => setSelectedPath(buttonText)}>
-          <div className="bg-[#000] w-full h-full px-5 flex flex-row items-center rounded-sm border-gray-300/40 border-[1px] transition-transform translate-x-2">
+          <div className="bg-[#000] w-full h-full px-5 flex flex-row items-center rounded-sm border-gray-300/40 border-[1px] transition-transform translate-x-3">
             <Icon className="mr-2 h-4 w-4" />
             {buttonText}
           </div>{" "}

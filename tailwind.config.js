@@ -16,6 +16,10 @@ module.exports = {
       },
     },
     extend: {
+        fontFamily: {
+        regular: "var(--font-regular)",
+        bold: "var(--font-bold)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
