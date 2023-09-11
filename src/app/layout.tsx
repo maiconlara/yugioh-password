@@ -24,7 +24,7 @@ export default function RootLayout({
         <body
         className={`${inter.className} ${titiliumRegular.variable} ${titiliumBold.variable} font-regular text-white text-lg leading-relaxed bg-[#111111]`}
       >
-        <main className="grid md:grid-cols-[300px,calc(80vw-300px)] h-screen  ">
+        <main className="grid md:grid-cols-[300px,calc(100vw-300px)] h-screen">
           <Menu />
           <div className="flex h-full max-h-screen w-full flex-col bg-cover">
             {children}
