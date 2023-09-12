@@ -1,5 +1,5 @@
 
-import { Home, KeyRound, Github, LayoutGrid } from "lucide-react";
+import { Home, KeyRound, ZoomIn, User } from "lucide-react";
 
 export const buttons = [
   {
@@ -16,14 +16,14 @@ export const buttons = [
   },
   {
     id: 3,
-    buttonText: "Github",
-    Icon: Github,
-    path: "https://github.com/maiconlara",
+    buttonText: "Pesquisar",
+    Icon: ZoomIn,
+    path: "/search",
   },
   {
     id: 4,
-    buttonText: "Portfolio",
-    Icon: LayoutGrid,
-    path: "/portfolio",
+    buttonText: "Sobre Mim",
+    Icon: User,
+    path: "/about",
   },
 ];
