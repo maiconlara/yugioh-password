@@ -43,16 +43,11 @@ const Mobile = () => {
           <div className="flex flex-col items-center justify-center h-[120px] w-full">
             <div className="w-full px-2 bg-gray-300/40 h-px"></div>
             <div className="flex flex-col items-center justify-center pt-4">
-              <p className="text-sm">Bem vindo à Yu-Gi-Oh! Password</p>
-              <p className="text-xs pt-2">Feito Com 💙 por Maicon Lara</p>
+              <p className="text-sm font-regular">Bem vindo à Yu-Gi-Oh! Password</p>
+              <p className="text-xs pt-2 font-regular">Feito Com 💙 por Maicon Lara</p>
             </div>
           </div>
         </div>
-        <SheetFooter>
-          <SheetClose asChild>
-            <Button type="submit">Save changes</Button>
-          </SheetClose>
-        </SheetFooter>
       </SheetContent>
     </Sheet>
   );

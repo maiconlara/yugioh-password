@@ -10,7 +10,7 @@ const MobileButton = ({ buttonText, Icon, path }: ButtonProps) => {
   return (
     <div className="w-full h-12 ">
       <Link href={path}>
-        <div className="bg-[#000] w-full h-full px-5 flex flex-row items-center rounded-sm hover:bg-gray-100/40">
+        <div className="bg-[#000] w-full h-full px-5 flex flex-row items-center rounded-sm hover:bg-gray-100/40 font-regular">
           <Icon className="mr-2 h-4 w-4" />
           {buttonText}
         </div>{" "}

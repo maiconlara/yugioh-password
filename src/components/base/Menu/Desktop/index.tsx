@@ -29,7 +29,7 @@ const Desktop = () => {
       </div>
       <div className="flex flex-col items-center justify-between h-20 w-full">
         <div className="w-full px-2 bg-gray-300/40 h-px"></div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center font-regular">
           <h1>Bem vindo à Yu-Gi-Oh! Password</h1>
           <p className="text-xs pt-4">Feito Com 💙 por Maicon Lara</p>
         </div>

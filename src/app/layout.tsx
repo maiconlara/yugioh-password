@@ -26,7 +26,7 @@ export default function RootLayout({
       >
         <main className="grid md:grid-cols-[300px,calc(100vw-300px)] h-screen">
           <Menu />
-          <div className="flex h-full max-h-screen w-full flex-col bg-cover">
+          <div className="flex h-full max-h-screen w-full flex-col bg-cover px-6">
             {children}
           </div>
         </main>

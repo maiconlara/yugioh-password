@@ -2,7 +2,7 @@ import AboutCards from "@/components/base/AboutCards";
 const About = () => {
   return (
     <div className=" flex justify-center items-center h-screen bg-[#111111]">
-      <div className="flex flex-row items-center justify-center gap-6">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6">
         <AboutCards
           title="Portfolio"
           text="Take a look at my portfolio"

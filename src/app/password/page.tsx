@@ -25,7 +25,7 @@ const Password = () => {
   };
 
   return (
-    <div className=" flex justify-center items-center h-screen bg-[#111111]">
+    <div className=" flex mt-20 justify-center items-center h-screen bg-[#111111]">
       <div className="flex flex-col items-center gap-4">
         {isLoading ? (
           <div className="w-[246px] h-[363px] flex items-center justify-center">
@@ -34,11 +34,11 @@ const Password = () => {
         ) : (
           <Cards cards={cards}/>
         )}
-        <div className="flex flex-row items-center justify-center gap-2 pt-4 w-[400px]">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-2 pt-4 w-[400px]">
           <Input
             type="number"
             placeholder="ex. 54752875"
-            className="bg-transparent border-[1px] border-gray-300/40 focus:ring-gray-500 focus:ring-1 focus:outline-none ring-offset-0 content-center"
+            className="bg-transparent border-[1px] max-w-[265px] border-gray-300/40 focus:ring-gray-500 focus:ring-1 focus:outline-none ring-offset-0 content-center"
             onInput={handleInputChange}
           />
           <Button
