@@ -1,7 +1,7 @@
-import { ButtonProps } from "./Desktop/DesktopButton";
+
 import { Home, KeyRound, Github, LayoutGrid } from "lucide-react";
 
-export const buttons: ButtonProps[] = [
+export const buttons = [
   {
     id: 1,
     buttonText: "Home",
@@ -18,12 +18,12 @@ export const buttons: ButtonProps[] = [
     id: 3,
     buttonText: "Github",
     Icon: Github,
-    path: "/",
+    path: "https://github.com/maiconlara",
   },
   {
     id: 4,
     buttonText: "Portfolio",
     Icon: LayoutGrid,
-    path: "/",
+    path: "/portfolio",
   },
 ];
