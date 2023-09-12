@@ -15,7 +15,7 @@ const Cards = ({cards} : CardsProps) => {
           width={328}
           height={484}
           alt=""
-          className="rounded-sm h-[363px] w-[246px] transform-gpu"
+          className="rounded-sm h-[242px] w-[164px] md:h-[363px] md:w-[246px] transform-gpu"
         />
       </div>
       ) : (
@@ -25,7 +25,7 @@ const Cards = ({cards} : CardsProps) => {
           width={328}
           height={484}
           alt=""
-          className="rounded-sm h-[363px] w-[246px] transform-gpu"
+          className="rounded-sm h-[242px] w-[164px] md:h-[363px] md:w-[246px] transform-gpu"
         />
       </div>
       )}
