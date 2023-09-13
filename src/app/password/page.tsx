@@ -6,7 +6,6 @@ import { Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import Cards from "@/components/base/Cards";
 
-
 const Password = () => {
   const [cards, setCards] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -19,7 +18,7 @@ const Password = () => {
     setIsLoading(false);
   };
 
-    const handleInputChange = (event: any) => {
+  const handleInputChange = (event: any) => {
     const text = event.target.value;
     setPassword(text);
   };
@@ -28,11 +27,11 @@ const Password = () => {
     <div className="flex justify-center items-center h-screen bg-[#111111]">
       <div className="flex flex-col items-center gap-4">
         {isLoading ? (
-          <div className="w-[246px] h-[363px] flex items-center justify-center">
+          <div className=" h-[242px] w-[164px] md:h-[363px] md:w-[246px] flex items-center justify-center">
             <Loader2 className="text-white animate-spin w-12 h-12 " />
           </div>
         ) : (
-          <Cards cards={cards}/>
+          <Cards cards={cards} />
         )}
         <div className="flex flex-col md:flex-row items-center justify-center gap-2 pt-4">
           <Input
