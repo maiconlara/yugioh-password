@@ -4,11 +4,7 @@ import DesktopButton from "./DesktopButton";
 import { buttons } from "../data";
 import logo from "../../../../assets/logo.webp";
 import Image from "next/image";
-import { useState } from "react";
-
 const Desktop = () => {
-  const [selectedPath, setSelectedPath] = useState<string>("Home");
-
   return (
     <div className="hidden md:flex flex-col  w-full  py-5 justify-between items-start h-screen bg-black border-r-[1px] border-gray-300/40">
       <div className="flex flex-col w-full items-center  gap-6">
@@ -22,8 +18,6 @@ const Desktop = () => {
             buttonText={button.buttonText}
             Icon={button.Icon}
             path={button.path}
-            setSelectedPath={setSelectedPath}
-            selectedPath={selectedPath}
           />
         ))}
       </div>
