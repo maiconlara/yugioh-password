@@ -5,11 +5,15 @@ import { useState } from "react";
 import { Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import Cards from "@/components/base/Cards";
+import { CardObject } from "../interface/card";
 
 const Password = () => {
-  const [cards, setCards] = useState("");
+  const [cards, setCards] = useState<CardObject>();
   const [isLoading, setIsLoading] = useState(false);
   const [password, setPassword] = useState("");
+
+  const cardImage = cards?.data[0].card_images[0].image_url ?? "";
+  const cardName = cards?.data[0].name ?? "";
 
   const handleCardsApi = async () => {
     setIsLoading(true);
@@ -31,7 +35,7 @@ const Password = () => {
             <Loader2 className="text-white animate-spin w-12 h-12 " />
           </div>
         ) : (
-          <Cards cards={cards} />
+          <Cards cards={cardImage} name={cardName} />
         )}
         <div className="flex flex-col md:flex-row items-center justify-center gap-2 pt-4">
           <Input
