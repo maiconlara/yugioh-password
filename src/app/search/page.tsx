@@ -37,14 +37,15 @@ const Search = () => {
 
   return (
     <div className=" flex justify-center items-center h-screen bg-[#111111]">
-      <div className="flex flex-col h-[200px] justify-around">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-2 pt-4">
+      <div className="flex flex-col w-[400px] h-[300px] md:h-[220px] justify-center md:justify-around gap-3">
+        <div className="flex flex-row items-center justify-center gap-2 pt-4">
           <Input
             maxLength={52}
             type="text"
             placeholder="ex. Red-Eyes Black Dragon"
-            className="bg-transparent border-[1px] w-[160px] md:w-[265px] border-gray-300/40 focus:ring-gray-500 focus:ring-1 focus:outline-none ring-offset-0 content-center"
+            className="bg-transparent border-[1px] w-[400px] md:w-[265px] border-gray-300/40 focus:ring-gray-500 focus:ring-1 focus:outline-none ring-offset-0 content-center"
             onInput={handleInputChange}
+            
           />
           <Button
             onClick={handleCardsApi}
