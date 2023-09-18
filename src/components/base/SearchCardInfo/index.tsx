@@ -64,6 +64,13 @@ const SearchCardInfo = ({ card }: SearchCardInfoProps) => {
           ) : null}
         </div>
         <div className="w-full bg-gray-300/40 h-px"></div>
+        <div className="flex flex-row w-full gap-1 justify-center font-bold">
+          {id && (
+            <>
+              <p className="text-sm">Password: {id}</p>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
