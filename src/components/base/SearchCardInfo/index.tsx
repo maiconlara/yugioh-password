@@ -35,7 +35,9 @@ const SearchCardInfo = ({ card }: SearchCardInfoProps) => {
           <p className="text-sm font-regular">{type}</p>
         </div>
         <div className="flex flex-col gap-1 w-full items-center justify-center">
-          <img src={croppedImage} alt="" className="rounded-lg w-28 h-28" />
+          {croppedImage && (
+            <img src={croppedImage} alt="" className="rounded-lg w-28 h-28" />
+          )}
           <div
             className={`items-center rounded-full text-black px-2`}
             style={typeColor}

@@ -7,6 +7,7 @@ import { getCardByName } from "../api/api";
 import SearchCardInfo from "@/components/base/SearchCardInfo";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Loader2 } from "lucide-react";
 
 const Search = () => {
   const params = useSearchParams();
@@ -35,6 +36,12 @@ const Search = () => {
     setSearchName(text);
   };
 
+  const handleEnter = (event: any) => {
+    if (event.key === "Enter") {
+      handleCardsApi();
+    }
+  };
+
   return (
     <div className=" flex justify-center items-center h-screen bg-[#111111]">
       <div className="flex flex-col w-[400px] h-[300px] md:h-[220px] justify-center md:justify-around gap-3">
@@ -45,7 +52,7 @@ const Search = () => {
             placeholder="ex. Red-Eyes Black Dragon"
             className="bg-transparent border-[1px] w-[400px] md:w-[265px] border-gray-300/40 focus:ring-gray-500 focus:ring-1 focus:outline-none ring-offset-0 content-center"
             onInput={handleInputChange}
-            
+            onKeyDown={handleEnter}
           />
           <Button
             onClick={handleCardsApi}
@@ -54,7 +61,13 @@ const Search = () => {
             Buscar carta
           </Button>
         </div>
-        <SearchCardInfo card={card} />
+        {isLoading ? (
+          <div className="flex items-center justify-center">
+            <Loader2 className="text-white animate-spin w-12 h-12 " />
+          </div>
+        ) : (
+          <SearchCardInfo card={card} />
+        )}
       </div>
     </div>
   );

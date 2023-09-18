@@ -27,6 +27,13 @@ const Password = () => {
     setPassword(text);
   };
 
+   const handleEnter = (event: any) => {
+    if (event.key === "Enter") {
+      handleCardsApi();
+    }
+  };
+
+
   return (
     <div className="flex justify-center items-center h-screen bg-[#111111]">
       <div className="flex flex-col items-center gap-4">
@@ -43,6 +50,7 @@ const Password = () => {
             placeholder="ex. 54752875"
             className="bg-transparent border-[1px] w-[160px] md:w-[265px] border-gray-300/40 focus:ring-gray-500 focus:ring-1 focus:outline-none ring-offset-0 content-center"
             onInput={handleInputChange}
+            onKeyDown={handleEnter}
           />
           <Button
             onClick={handleCardsApi}
