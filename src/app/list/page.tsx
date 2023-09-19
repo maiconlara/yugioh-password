@@ -71,7 +71,7 @@ const List = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center px-6 py-6">
+      <div className="flex flex-col items-center px-6 py-6 mt-20 max-h-[80vh]"  >
         {isLoading ? (
           <div className="flex items-center justify-center">
             <Loader2 className="text-white animate-spin w-12 h-12 " />
