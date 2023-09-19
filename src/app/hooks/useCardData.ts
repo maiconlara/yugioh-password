@@ -13,6 +13,7 @@ export const useCardData = (card: CardObject | undefined) => {
   const race = data ? data[0].race : "";
   const attribute = data ? data[0].attribute : "";
   const croppedImage = data ? data[0].card_images[0].image_url_cropped : "";
+  const cardImage = data ? data[0].card_images[0].image_url : "";
   const cardmarket_price = data ? data[0].card_prices : "N/A";
   const tcgplayer_price = data ? data[0].card_prices : "N/A";
   const ebay_price = data ? data[0].card_prices : "N/A";
@@ -32,6 +33,7 @@ export const useCardData = (card: CardObject | undefined) => {
     race,
     attribute,
     croppedImage,
+    cardImage,
     cardmarket_price,
     tcgplayer_price,
     ebay_price,
