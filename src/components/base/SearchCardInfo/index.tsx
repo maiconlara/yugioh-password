@@ -1,6 +1,7 @@
 import { handleCardType } from "@/app/hooks/handleCardType";
 
 import { CardObject } from "@/app/interface/card";
+import { useCardData } from "@/app/hooks/useCardData";
 import ImageContainer from "./ImageContainer";
 
 interface SearchCardInfoProps {
@@ -8,23 +9,20 @@ interface SearchCardInfoProps {
 }
 
 const SearchCardInfo = ({ card }: SearchCardInfoProps) => {
-  const { data } = card || {};
-  const name = data ? data[0].name : "";
-  const id = data ? data[0].id : "";
-  const type = data ? data[0].type : "";
-  const frameType = data ? data[0].frameType : "";
-  const atk = data ? data[0].atk : "";
-  const def = data ? data[0].def : "";
-  const zeroStatus = atk || def === 0;
-  const linkValue = data ? data[0].linkval : "";
-  const race = data ? data[0].race : "";
-  const attribute = data ? data[0].attribute : "";
-  const croppedImage = data ? data[0].card_images[0].image_url_cropped : "";
-  const cardmarket_price = data ? data[0].card_prices : "N/A";
-  const tcgplayer_price = data ? data[0].card_prices : "N/A";
-  const ebay_price = data ? data[0].card_prices : "N/A";
-  const amazon_price = data ? data[0].card_prices : "N/A";
-  const coolstuffinc_price = data ? data[0].card_prices : "N/A";
+
+  const {
+    name,
+    id,
+    type,
+    frameType,
+    croppedImage,
+    race,
+    attribute,
+    atk,
+    def,
+    zeroStatus,
+    linkValue,
+  } = useCardData(card);
 
   const typeColor = handleCardType(frameType);
 
@@ -35,7 +33,12 @@ const SearchCardInfo = ({ card }: SearchCardInfoProps) => {
           <p className="text-sm font-bold">{name}</p>
           <p className="text-sm font-regular">{type}</p>
         </div>
-        <ImageContainer croppedImage={croppedImage} typeColor={typeColor} race={race} attribute={attribute} />
+        <ImageContainer
+          croppedImage={croppedImage}
+          typeColor={typeColor}
+          race={race}
+          attribute={attribute}
+        />
         <div className="flex flex-row w-full gap-8 justify-center">
           {atk || def || zeroStatus ? (
             <>
