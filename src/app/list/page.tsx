@@ -84,6 +84,7 @@ const List = () => {
                   src={item.card_images[0].image_url_cropped}
                   alt=""
                   className="rounded-lg w-28 h-28"
+                  key={index}
                 />
               );
             })}
