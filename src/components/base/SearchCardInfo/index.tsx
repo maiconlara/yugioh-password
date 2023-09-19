@@ -1,7 +1,7 @@
 import { handleCardType } from "@/app/hooks/handleCardType";
+
 import { CardObject } from "@/app/interface/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ChevronRight } from "lucide-react";
+import ImageContainer from "./ImageContainer";
 
 interface SearchCardInfoProps {
   card: CardObject | undefined;
@@ -16,6 +16,7 @@ const SearchCardInfo = ({ card }: SearchCardInfoProps) => {
   const atk = data ? data[0].atk : "";
   const def = data ? data[0].def : "";
   const zeroStatus = atk || def === 0;
+  const linkValue = data ? data[0].linkval : "";
   const race = data ? data[0].race : "";
   const attribute = data ? data[0].attribute : "";
   const croppedImage = data ? data[0].card_images[0].image_url_cropped : "";
@@ -34,32 +35,16 @@ const SearchCardInfo = ({ card }: SearchCardInfoProps) => {
           <p className="text-sm font-bold">{name}</p>
           <p className="text-sm font-regular">{type}</p>
         </div>
-        <div className="flex flex-col gap-1 w-full items-center justify-center">
-          {croppedImage && (
-            <img src={croppedImage} alt="" className="rounded-lg w-28 h-28" />
-          )}
-          <div
-            className={`items-center rounded-full text-black px-2`}
-            style={typeColor}
-          >
-            {race && attribute && (
-              <p className="text-xs font-regular">
-                {race} / {attribute}
-              </p>
-            )}
-            {race && !attribute && (
-              <p className="text-xs font-regular">{race}</p>
-            )}
-            {!race && attribute && (
-              <p className="text-xs font-regular">{attribute}</p>
-            )}
-          </div>
-        </div>
+        <ImageContainer croppedImage={croppedImage} typeColor={typeColor} race={race} attribute={attribute} />
         <div className="flex flex-row w-full gap-8 justify-center">
           {atk || def || zeroStatus ? (
             <>
               <p className="text-sm font-regular">Ataque: {atk}</p>
-              <p className="text-sm font-regular">Defesa: {def}</p>
+              {linkValue ? (
+                <p className="text-sm font-bold">LINK-{linkValue}</p>
+              ) : (
+                <p className="text-sm font-regular">Defesa: {def}</p>
+              )}
             </>
           ) : null}
         </div>

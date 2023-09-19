@@ -32,6 +32,7 @@ interface CardSet {
     level: number;
     race: string;
     attribute: string;
+    linkval?: number;
     card_sets: CardSet[];
     card_images: CardImage[];
     card_prices: CardPrices[];
