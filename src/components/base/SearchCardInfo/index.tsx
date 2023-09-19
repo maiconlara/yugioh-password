@@ -3,13 +3,13 @@ import { handleCardType } from "@/app/hooks/handleCardType";
 import { CardObject } from "@/app/interface/card";
 import { useCardData } from "@/app/hooks/useCardData";
 import ImageContainer from "./ImageContainer";
+import StatusContainer from "./StatusContainer";
 
 interface SearchCardInfoProps {
   card: CardObject | undefined;
 }
 
 const SearchCardInfo = ({ card }: SearchCardInfoProps) => {
-
   const {
     name,
     id,
@@ -39,18 +39,12 @@ const SearchCardInfo = ({ card }: SearchCardInfoProps) => {
           race={race}
           attribute={attribute}
         />
-        <div className="flex flex-row w-full gap-8 justify-center">
-          {atk || def || zeroStatus ? (
-            <>
-              <p className="text-sm font-regular">Ataque: {atk}</p>
-              {linkValue ? (
-                <p className="text-sm font-bold">LINK-{linkValue}</p>
-              ) : (
-                <p className="text-sm font-regular">Defesa: {def}</p>
-              )}
-            </>
-          ) : null}
-        </div>
+        <StatusContainer
+          atk={atk}
+          def={def}
+          zeroStatus={zeroStatus}
+          linkValue={linkValue}
+        />
         <div className="w-full bg-gray-300/40 h-px"></div>
         <div className="flex flex-row w-full gap-1 justify-center font-bold">
           {id && (

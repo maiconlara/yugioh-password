@@ -6,7 +6,7 @@ interface CardSet {
     set_price: string;
   }
   
-  interface CardImage {
+  export interface CardImage {
     id: number;
     image_url: string;
     image_url_small: string;
@@ -21,7 +21,7 @@ interface CardSet {
     coolstuffinc_price: string;
   }
   
-  interface CardData {
+  export interface CardData {
     id: number;
     name: string;
     type: string;

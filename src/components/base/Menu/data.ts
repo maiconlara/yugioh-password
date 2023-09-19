@@ -1,5 +1,5 @@
 
-import { Home, KeyRound, ZoomIn, User } from "lucide-react";
+import { Home, KeyRound, ZoomIn, User, ListOrdered } from "lucide-react";
 
 export const buttons = [
   {
@@ -22,8 +22,15 @@ export const buttons = [
   },
   {
     id: 4,
+    buttonText: "Lista",
+    Icon: ListOrdered,
+    path: "/list",
+  },
+  {
+    id: 5,
     buttonText: "Sobre Mim",
     Icon: User,
     path: "/about",
   },
+
 ];

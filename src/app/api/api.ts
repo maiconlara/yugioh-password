@@ -31,3 +31,18 @@ export const getCardByName = async (name: string) => {
     console.error("An error occurred:", error);
   }
 };
+export const getCardsList = async (query: string) => {
+  try {
+    const response = await axios.get<CardObject>(
+      `https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=${query}`
+    );
+    if (response.status === 200) {
+      const { data } = response;
+      return data;
+    } else {
+      console.error(`Request failed with status code ${response.status}`);
+    }
+  } catch (error) {
+    console.error("An error occurred:", error);
+  }
+};

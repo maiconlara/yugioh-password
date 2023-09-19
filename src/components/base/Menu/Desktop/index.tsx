@@ -11,7 +11,7 @@ const Desktop = () => {
         <Image src={logo} alt="" width={200} height={200} />
         <div className="w-full bg-gray-300/40 h-px"></div>
       </div>
-      <div className="flex flex-col items-start justify-between h-[280px] w-full -mt-16">
+      <div className="flex flex-col items-start justify-between h-[300px] w-full -mt-16">
         {buttons.map((button) => (
           <DesktopButton
             key={button.id}
