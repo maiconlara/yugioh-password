@@ -1,3 +1,4 @@
+import Image from "next/image";
 interface ImageContainerProps {
   croppedImage: string;
   typeColor: React.CSSProperties;
@@ -14,7 +15,13 @@ const ImageContainer = ({
   return (
     <div className="flex flex-col gap-1 w-full items-center justify-center">
       {croppedImage && (
-        <img src={croppedImage} alt="" className="rounded-lg w-28 h-28" />
+        <Image
+            src={croppedImage}
+            width={280}
+            height={280}
+            alt=""
+            className="rounded-lg w-28 h-28"
+          />
       )}
       <div
         className={`items-center rounded-full text-black px-2`}

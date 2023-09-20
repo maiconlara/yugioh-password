@@ -4,6 +4,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import Image from "next/image";
 
 interface ListCardProps {
   name: string;
@@ -36,7 +37,13 @@ const ListCard = ({ name, id, image }: ListCardProps) => {
           <p className="text-sm font-regular">{id}</p>
         </div>
         <div className="items-center justify-center flex">
-          <img src={image} alt="" className="rounded-lg w-28 h-28" />
+          <Image
+            src={image}
+            width={280}
+            height={280}
+            alt=""
+            className="rounded-lg w-28 h-28"
+          />
         </div>
       </div>
     </div>
