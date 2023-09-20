@@ -39,8 +39,8 @@ const ListCard = ({ name, id, image }: ListCardProps) => {
         <div className="items-center justify-center flex">
           <Image
             src={image}
-            width={280}
-            height={280}
+            width={112}
+            height={112}
             alt=""
             className="rounded-lg w-28 h-28"
           />
