@@ -6,7 +6,7 @@ import ImageContainer from "./ImageContainer";
 import StatusContainer from "./StatusContainer";
 
 interface SearchCardInfoProps {
-  card: CardObject | undefined;
+  card: CardObject | null | undefined;
 }
 
 const SearchCardInfo = ({ card }: SearchCardInfoProps) => {

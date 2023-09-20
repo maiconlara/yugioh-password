@@ -1,6 +1,6 @@
 import { CardObject } from "../interface/card";
 
-export const useCardData = (card: CardObject | undefined) => {
+export const useCardData = (card: CardObject | null | undefined) => {
   const { data } = card || {};
   const name = data ? data[0].name : "";
   const id = data ? data[0].id : "";

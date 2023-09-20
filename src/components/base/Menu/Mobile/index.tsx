@@ -16,7 +16,7 @@ const Mobile = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <AlignJustify className="absolute top-4 right-4 md:hidden text-white cursor-pointer " />
+        <AlignJustify className="absolute top-4 right-4 md:hidden text-white cursor-pointer z-20" />
       </SheetTrigger>
       <SheetContent className="bg-[#000] border-gray-300 md:hidden ">
         <div className="flex flex-col  w-full  py-5 justify-between items-start h-screen bg-[#000]">
