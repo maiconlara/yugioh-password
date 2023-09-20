@@ -9,7 +9,7 @@ import { CardObject } from "../interface/card";
 import { useCardData } from "../hooks/useCardData";
 
 const Password = () => {
-  const [cards, setCards] = useState<CardObject>();
+  const [cards, setCards] = useState<CardObject | null>();
   const [isLoading, setIsLoading] = useState(false);
   const [password, setPassword] = useState("");
 
