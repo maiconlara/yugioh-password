@@ -10,10 +10,10 @@ export const getCards = async (id: string) => {
       const { data } = response;
       return data;
     } else {
-      console.error(`Request failed with status code ${response.status}`);
+      return null;
     }
   } catch (error) {
-    console.error("An error occurred:", error);
+    return null;
   }
 };
 export const getCardByName = async (name: string) => {
@@ -25,10 +25,10 @@ export const getCardByName = async (name: string) => {
       const { data } = response;
       return data;
     } else {
-      console.error(`Request failed with status code ${response.status}`);
+      return null;
     }
   } catch (error) {
-    console.error("An error occurred:", error);
+    return null;
   }
 };
 export const getCardsList = async (query: string) => {
@@ -40,9 +40,9 @@ export const getCardsList = async (query: string) => {
       const { data } = response;
       return data;
     } else {
-      console.error(`Request failed with status code ${response.status}`);
+      return null;
     }
   } catch (error) {
-    console.error("An error occurred:", error);
+    return null;
   }
 };

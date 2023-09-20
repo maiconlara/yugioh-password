@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CardObject } from "../interface/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -9,7 +9,7 @@ import { Loader2 } from "lucide-react";
 import ListCard from "@/components/base/ListCard";
 
 const List = () => {
-  const [card, setCard] = useState<CardObject>();
+  const [card, setCard] = useState<CardObject | null>();
   const [searchName, setSearchName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
@@ -20,19 +20,18 @@ const List = () => {
   const handleCardsApi = async () => {
     setIsLoading(true);
     if (searchName.length > 3) {
-      try {
-        const response = await getCardsList(searchName);
-        setCard(response);
-        console.log(card);
-        setIsLoading(false);
-      } catch (error: any) {
-        setShowNoCard(true);
-      }
+      const response = await getCardsList(searchName);
+      setCard(response);
+      setIsLoading(false);
     } else {
-      setShowMessage(true);
+      setShowMessage(true)
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    card === null && isLoading === false ? setShowNoCard(true) : setShowNoCard(false);
+  }, [card]);
 
   const handleInputChange = (event: any) => {
     const text = event.target.value;
@@ -82,7 +81,7 @@ const List = () => {
           <div className="flex items-center justify-center">
             <Loader2 className="text-white animate-spin w-12 h-12 " />
           </div>
-        ) : (
+        ) : !showNoCard ? (
           <div className="flex flex-wrap items-center gap-2 justify-center pb-6">
             {list?.map((item, index) => {
               return (
@@ -94,6 +93,10 @@ const List = () => {
                 />
               );
             })}
+          </div>
+        ) : (
+          <div>
+            <p className="font-regular text-xl">Não foram encontradas cartas!</p>
           </div>
         )}
       </div>
