@@ -6,22 +6,28 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { getCardsList } from "../api/api";
 import { Loader2 } from "lucide-react";
+import ListCard from "@/components/base/ListCard";
 
 const List = () => {
   const [card, setCard] = useState<CardObject>();
   const [searchName, setSearchName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
+  const [showNoCard, setShowNoCard] = useState(false);
 
   const list = card?.data;
 
   const handleCardsApi = async () => {
     setIsLoading(true);
     if (searchName.length > 3) {
-      const response = await getCardsList(searchName);
-      setCard(response);
-      console.log(card);
-      setIsLoading(false);
+      try {
+        const response = await getCardsList(searchName);
+        setCard(response);
+        console.log(card);
+        setIsLoading(false);
+      } catch (error: any) {
+        setShowNoCard(true);
+      }
     } else {
       setShowMessage(true);
       setIsLoading(false);
@@ -71,19 +77,19 @@ const List = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center px-6 py-6 mt-20 max-h-[80vh]"  >
+      <div className="flex flex-col items-center px-6 py-6 mt-20 max-h-[80vh]">
         {isLoading ? (
           <div className="flex items-center justify-center">
             <Loader2 className="text-white animate-spin w-12 h-12 " />
           </div>
         ) : (
-          <div className="flex flex-wrap items-start gap-2 justify-start">
+          <div className="flex flex-wrap items-center gap-2 justify-center pb-6">
             {list?.map((item, index) => {
               return (
-                <img
-                  src={item.card_images[0].image_url_cropped}
-                  alt=""
-                  className="rounded-lg w-28 h-28"
+                <ListCard
+                  name={item.name}
+                  id={item.id}
+                  image={item.card_images[0].image_url_cropped}
                   key={index}
                 />
               );

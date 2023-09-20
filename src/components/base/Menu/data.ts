@@ -1,4 +1,3 @@
-
 import { Home, KeyRound, ZoomIn, User, ListOrdered } from "lucide-react";
 
 export const buttons = [
@@ -10,9 +9,9 @@ export const buttons = [
   },
   {
     id: 2,
-    buttonText: "Password",
-    Icon: KeyRound,
-    path: "/password",
+    buttonText: "Lista",
+    Icon: ListOrdered,
+    path: "/list",
   },
   {
     id: 3,
@@ -22,9 +21,9 @@ export const buttons = [
   },
   {
     id: 4,
-    buttonText: "Lista",
-    Icon: ListOrdered,
-    path: "/list",
+    buttonText: "Password",
+    Icon: KeyRound,
+    path: "/password",
   },
   {
     id: 5,
@@ -32,5 +31,4 @@ export const buttons = [
     Icon: User,
     path: "/about",
   },
-
 ];
