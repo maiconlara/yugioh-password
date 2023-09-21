@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { getCardsList } from "../api/api";
 import { Loader2 } from "lucide-react";
 import ListCard from "@/components/base/ListCard";
+import InputButton from "@/components/base/InputButton";
 
 const List = () => {
   const [card, setCard] = useState<CardObject | null>();
@@ -24,13 +25,15 @@ const List = () => {
       setCard(response);
       setIsLoading(false);
     } else {
-      setShowMessage(true)
+      setShowMessage(true);
       setIsLoading(false);
     }
   };
 
   useEffect(() => {
-    card === null && isLoading === false ? setShowNoCard(true) : setShowNoCard(false);
+    card === null && isLoading === false
+      ? setShowNoCard(true)
+      : setShowNoCard(false);
   }, [card]);
 
   const handleInputChange = (event: any) => {
@@ -59,20 +62,13 @@ const List = () => {
             <div className="h-[20px]"></div>
           )}
           <div className="flex flex-row items-center justify-center gap-2 pt-4">
-            <Input
-              maxLength={52}
-              type="text"
-              placeholder="ex. Neko..."
-              className="bg-transparent border-[1px] w-[180px] md:w-[265px] border-gray-300/40 focus:ring-gray-500 focus:ring-1 focus:outline-none ring-offset-0 content-center"
-              onInput={handleInputChange}
-              onKeyDown={handleEnter}
+            <InputButton
+              placeholder="Neko..."
+              handleInputChange={handleInputChange}
+              handleEnter={handleEnter}
+              handleCardsApi={handleCardsApi}
+              plural
             />
-            <Button
-              onClick={handleCardsApi}
-              className="font-bold uppercase rounded-sm bg-[#000] border-gray-300/40 border-[1px] hover:bg-transparent transition-colors w-auto min-w-fit"
-            >
-              Buscar cartas
-            </Button>
           </div>
         </div>
       </div>
@@ -96,7 +92,9 @@ const List = () => {
           </div>
         ) : (
           <div>
-            <p className="font-regular text-xl">Não foram encontradas cartas!</p>
+            <p className="font-regular text-xl">
+              Não foram encontradas cartas!
+            </p>
           </div>
         )}
       </div>

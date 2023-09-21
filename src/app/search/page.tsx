@@ -8,6 +8,7 @@ import SearchCardInfo from "@/components/base/SearchCardInfo";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
+import InputButton from "@/components/base/InputButton";
 
 const Search = () => {
   const params = useSearchParams();
@@ -15,7 +16,7 @@ const Search = () => {
   const [card, setCard] = useState<CardObject | null>();
   const [searchName, setSearchName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-   const [showMessage, setShowMessage] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
 
   useEffect(() => {
     if (name) {
@@ -32,8 +33,10 @@ const Search = () => {
     setIsLoading(false);
   };
 
-    useEffect(() => {
-    card === null && isLoading === false ? setShowMessage(true) : setShowMessage(false);
+  useEffect(() => {
+    card === null && isLoading === false
+      ? setShowMessage(true)
+      : setShowMessage(false);
   }, [card]);
 
   const handleInputChange = (event: any) => {
@@ -50,30 +53,22 @@ const Search = () => {
   return (
     <div className=" flex justify-center items-center h-screen bg-[#111111]">
       <div className="flex flex-col  h-[300px] md:w-[400px] md:h-[220px] justify-center md:justify-around">
-      {showMessage ? (
-            <div className="h-[20px]">
-              <p className="text-xs font-bold text-red-400">
-                Essa carta não foi encontrada.
-              </p>
-            </div>
-          ) : (
-            <div className="h-[20px]"></div>
-          )}
+        {showMessage ? (
+          <div className="h-[20px]">
+            <p className="text-xs font-bold text-red-400">
+              Essa carta não foi encontrada.
+            </p>
+          </div>
+        ) : (
+          <div className="h-[20px]"></div>
+        )}
         <div className="flex flex-row items-center justify-center gap-2 pt-4 pb-2">
-          <Input
-            maxLength={52}
-            type="text"
-            placeholder="ex. Red-Eyes Black Dragon"
-            className="bg-transparent border-[1px] w-[180px] md:w-[265px] border-gray-300/40 focus:ring-gray-500 focus:ring-1 focus:outline-none ring-offset-0 content-center"
-            onInput={handleInputChange}
-            onKeyDown={handleEnter}
+          <InputButton
+            placeholder="Red-Eyes Black Dragon"
+            handleInputChange={handleInputChange}
+            handleEnter={handleEnter}
+            handleCardsApi={handleCardsApi}
           />
-          <Button
-            onClick={handleCardsApi}
-            className="font-bold uppercase rounded-sm bg-[#000] border-gray-300/40 border-[1px] hover:bg-transparent transition-colors w-auto min-w-fit"
-          >
-            Buscar carta
-          </Button>
         </div>
         {isLoading ? (
           <div className="flex items-center justify-center h-full w-full">
