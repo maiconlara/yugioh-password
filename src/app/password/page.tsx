@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import Cards from "@/components/base/Cards";
 import { CardObject } from "../interface/card";
 import { useCardData } from "../hooks/useCardData";
+import InputButton from "@/components/base/InputButton";
 
 const Password = () => {
   const [cards, setCards] = useState<CardObject | null>();
@@ -44,19 +45,12 @@ const Password = () => {
           <Cards cards={cardImage} name={name} />
         )}
         <div className="flex flex-col md:flex-row items-center justify-center gap-2 pt-4">
-          <Input
-            type="number"
-            placeholder="ex. 54752875"
-            className="bg-transparent border-[1px] w-[160px] md:w-[265px] border-gray-300/40 focus:ring-gray-500 focus:ring-1 focus:outline-none ring-offset-0 content-center"
-            onInput={handleInputChange}
-            onKeyDown={handleEnter}
+          <InputButton
+            placeholder="54752875"
+            handleInputChange={handleInputChange}
+            handleEnter={handleEnter}
+            handleCardsApi={handleCardsApi}
           />
-          <Button
-            onClick={handleCardsApi}
-            className="font-bold uppercase rounded-sm bg-[#000] border-gray-300/40 border-[1px] hover:bg-transparent transition-colors w-auto min-w-fit"
-          >
-            Buscar carta
-          </Button>
         </div>
       </div>
     </div>
