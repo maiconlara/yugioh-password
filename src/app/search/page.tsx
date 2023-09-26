@@ -78,7 +78,7 @@ const Search = () => {
           <SearchCardInfo card={card} />
         ) : (
           <div className="flex items-center justify-center h-full w-full text-regular">
-            Digite o nome completo de um carta
+            Digite o nome completo de uma carta
           </div>
         )}
       </div>
