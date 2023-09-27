@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { CardObject } from "../interface/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { getCardsList } from "../api/api";
 import { Loader2 } from "lucide-react";
 import ListCard from "@/components/base/ListCard";

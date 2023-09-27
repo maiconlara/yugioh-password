@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 import { CardObject } from "@/app/interface/card";
 import { getCardByName } from "../api/api";
 import SearchCardInfo from "@/components/base/SearchCardInfo";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 import InputButton from "@/components/base/InputButton";
 

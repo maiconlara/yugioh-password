@@ -1,9 +1,7 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import { getCards } from "./../api/api";
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
-import { Input } from "@/components/ui/input";
 import Cards from "@/components/base/Cards";
 import { CardObject } from "../interface/card";
 import { useCardData } from "../hooks/useCardData";

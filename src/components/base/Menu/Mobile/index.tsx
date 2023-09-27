@@ -1,12 +1,9 @@
 "use client";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
-  SheetFooter,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
 import { AlignJustify } from "lucide-react";
 import { buttons } from "../data";
 import MobileButton from "./MobileButton";

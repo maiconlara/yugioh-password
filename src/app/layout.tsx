@@ -2,7 +2,6 @@ import Menu from '@/components/base/Menu'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Titillium_Web } from 'next/font/google'
-import favicon from '../assets/favicon.ico'
 
 const inter = Inter({ subsets: ['latin'] })
 const titiliumRegular = Titillium_Web({ subsets: ['latin'], weight: "400", variable: "--font-regular" })
