@@ -1,34 +1,29 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Yu-Gi-Oh! Password
 
-First, run the development server:
+ A web application based in Yu-Gi-Oh! games to see card informations, have fun!
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## 📝 Pages
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This web application contains:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Home** - The first look in to the app, it'll show greet the user;
+* **Lista** - A search page that user can search yugioh cards by their names;
+* **Pesquisar** - This page will able the user to search a single card by the full name;
+* **Password** - The key page, it'll give the user an input to search using hidden password;
+* **Sobre Mim** - About me page;
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🛠️ Made with
 
-## Learn More
+This web application was made with:
 
-To learn more about Next.js, take a look at the following resources:
+* **React Js** - JS Library;
+* **TypeScript** - Programming Language;
+* **Next Js** - Reac Framework;
+* **TailwindCSS** - CSS Library;
+* **Shadcn/ui** - Component Library;
+* **Axios** - HTTP Client.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p align="center">Made with 🤍 by Maicon Lara</p>
