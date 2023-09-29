@@ -20,7 +20,7 @@ This web application was made with:
 
 * **React Js** - JS Library;
 * **TypeScript** - Programming Language;
-* **Next Js** - Reac Framework;
+* **Next Js** - React Framework;
 * **TailwindCSS** - CSS Library;
 * **Shadcn/ui** - Component Library;
 * **Axios** - HTTP Client.
