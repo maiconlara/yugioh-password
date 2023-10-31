@@ -1,4 +1,4 @@
-import { CardObject } from "../interface/card";
+import { CardObject } from "../../interface/card";
 
 export const useCardData = (card: CardObject | null | undefined) => {
   const { data } = card || {};
@@ -20,7 +20,6 @@ export const useCardData = (card: CardObject | null | undefined) => {
   const amazon_price = data ? data[0].card_prices : "N/A";
   const coolstuffinc_price = data ? data[0].card_prices : "N/A";
 
-
   return {
     name,
     id,
@@ -39,5 +38,5 @@ export const useCardData = (card: CardObject | null | undefined) => {
     ebay_price,
     amazon_price,
     coolstuffinc_price,
-  }
+  };
 };
