@@ -1,7 +1,7 @@
 import { handleCardType } from "@/app/utils/handleCardType";
 
 import { CardObject } from "@/app/interface/card";
-import { useCardData } from "@/app/hooks/useCardData";
+import { useCardData } from "@/app/utils/hooks/useCardData";
 import ImageContainer from "./ImageContainer";
 import StatusContainer from "./StatusContainer";
 
