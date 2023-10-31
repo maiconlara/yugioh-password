@@ -1,4 +1,4 @@
-import { handleCardType } from "@/app/hooks/handleCardType";
+import { handleCardType } from "@/app/utils/handleCardType";
 
 import { CardObject } from "@/app/interface/card";
 import { useCardData } from "@/app/hooks/useCardData";
