@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Loader2 } from "lucide-react";
 import Cards from "@/components/base/Cards";
 import { CardObject } from "../interface/card";
-import { useCardData } from "../hooks/useCardData";
+import { useCardData } from "../utils/hooks/useCardData";
 import InputButton from "@/components/base/InputButton";
 
 const Password = () => {
