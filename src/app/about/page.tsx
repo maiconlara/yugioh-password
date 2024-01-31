@@ -12,7 +12,7 @@ const About = () => {
         />
         <AboutCards
           title="Github"
-          text="Go checkout my GitHub"
+          text="Dê uma olhada no meu github"
           link="https://github.com/maiconlara"
           image={githubLogo.src}
         />
