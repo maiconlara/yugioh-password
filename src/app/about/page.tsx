@@ -1,4 +1,5 @@
 import AboutCards from "@/components/base/AboutCards";
+import githubLogo from "@/assets/github-logo.png"
 const About = () => {
   return (
     <div className=" flex justify-center items-center h-screen bg-[#111111]">
@@ -13,7 +14,7 @@ const About = () => {
           title="Github"
           text="Go checkout my GitHub"
           link="https://github.com/maiconlara"
-          image="https://github.com/maiconlara.png"
+          image={githubLogo.src}
         />
       </div>
     </div>
