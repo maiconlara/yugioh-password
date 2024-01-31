@@ -6,15 +6,16 @@ interface AboutCardProps {
   text: string;
   link: string;
   image: string;
+  fallback: string;
 }
 
-const AboutCards = ({ title, text, image, link }: AboutCardProps) => {
+const AboutCards = ({ title, text, image, link, fallback }: AboutCardProps) => {
   return (
     <div className="h-[120px] w-[280px] rounded-md border bg-black border-gray-300/40 justify-start space-x-4 py-4 px-4 flex flex-col">
       <div className="flex flex-row w-full">
         <Avatar>
           <AvatarImage  src={image} />
-          <AvatarFallback>hi</AvatarFallback>
+          <AvatarFallback>{fallback}</AvatarFallback>
         </Avatar>
         <div className="space-y-1 ml-4 w-full">
           <p className="text-sm font-bold">{title}</p>
