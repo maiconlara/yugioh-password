@@ -7,7 +7,7 @@ const About = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center gap-6">
         <AboutCards
           title="Portfolio"
-          text="Take a look at my portfolio"
+          text="Vem me conhecer, olhe meu portifólio!"
           link="https://portfolio-maiconlara.vercel.app/"
           image="https://github.com/maiconlara.png"
           fallback="ME"
