@@ -15,7 +15,7 @@ const AboutCards = ({ title, text, image, link, fallback }: AboutCardProps) => {
       <div className="flex flex-row w-full">
         <Avatar>
           <AvatarImage  src={image} />
-          <AvatarFallback>{fallback}</AvatarFallback>
+          <AvatarFallback className="text-black font-bold" >{fallback}</AvatarFallback>
         </Avatar>
         <div className="space-y-1 ml-4 w-full">
           <p className="text-sm font-bold">{title}</p>
